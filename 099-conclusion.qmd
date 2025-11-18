@@ -1,0 +1,16 @@
+{{< include _setup.qmd >}}
+
+::: {.content-visible when-format="pdf"}
+# Conclusion {#sec-conclusion}
+:::
+
+::: {.content-visible when-format="html"}
+# Conclusion {#sec-conclusion .unnumbered}
+:::
+
+You've made it to the end of the ManyBabies Manual.
+
+
+
+## Project-specific resources
+

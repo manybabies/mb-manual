@@ -1,0 +1,746 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  numbers=noenddot,
+  DIV=11,
+  oneside]{scrreprt}
+\usepackage{xcolor}
+\usepackage[left=1in,marginparwidth=2.0666666666667in,textwidth=4.1333333333333in,marginparsep=0.3in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%
+% start preamble.tex
+%%%%%%%%%%%%%%%%%%%%
+
+\input{resources/tex/boxes.tex}
+
+% page layout
+\geometry{
+  dvips=false, pdftex=false, vtex=false, % drivers can have unexpected behaviors
+  papersize={8in,10in},                  % size specified by MIT Press
+  centering,                             % split margins equally
+  margin=.6in,                           % margins (must all be at least .5in)
+  includemp, includehead                % include sidenotes & header in body
+  % showframe                              % show page structure (for debugging)
+}
+
+% set fonts
+% \setmainfont[]{ETbb}
+\setmainfont{ETbb}[
+  UprightFont = {*-Regular},
+  BoldFont = {*-Bold},
+  ItalicFont = {*-Italic},
+  BoldItalicFont = {*-BoldItalic},
+  Path = {./resources/fonts/ETbb/},
+  Extension = {.otf}
+]
+
+\setsansfont{SourceSansPro}[
+  UprightFont = {*-Regular},
+  % BoldFont = {*-Bold},
+  % ItalicFont = {*-Italic},
+  Path = {./resources/fonts/},
+  Extension = {.ttf}
+]
+
+% set font specifications
+\setkomafont{disposition}{\rmfamily\itshape}
+\addtokomafont{part}{\sffamily\scshape}
+\addtokomafont{partnumber}{\sffamily\scshape}
+\addtokomafont{chapter}{\sffamily\scshape}
+\setkomafont{partentry}{\sffamily\scshape}
+\setkomafont{chapterentry}{\sffamily\scshape}
+\addtokomafont{title}{\sffamily}%\scshape}
+\addtokomafont{subtitle}{\sffamily}%\scshape}
+% \addtokomafont{author}{\sffamily}
+\addtokomafont{pagehead}{\sffamily\scshape}
+\addtokomafont{pagenumber}{\sffamily\scshape}
+
+\usepackage{amsmath}
+\usepackage{unicode-math}
+
+% adjust spacing around section headers
+\RedeclareSectionCommand[
+  runin=false,
+  afterskip=0pt % remove extra space after for section
+]{section}
+\RedeclareSectionCommand[
+  runin=false,
+  afterskip=0pt % remove extra space after for subsection
+]{subsection}
+
+% only part number on part title pages
+\renewcommand{\partformat}{\thepart}
+
+% headers/footers
+\usepackage{scrlayer-scrpage}
+\KOMAoptions{headwidth=textwithmarginpar} % make header full width
+\automark{chapter}
+\clearpairofpagestyles
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} % prevent chaptermark from uppercasing
+\ihead{%
+  \ifnum\value{chapter}>0 \thechapter\hspace{3pt} \fi % include chapter number if not 0
+  \textsc{\leftmark} % then chapter name
+}
+\ohead{\pagemark}
+\pagestyle{scrheadings}
+
+% table of contents
+\usepackage[titles]{tocloft}
+\renewcommand{\cftpartfont}{\sffamily\scshape\Large}     % part title
+\renewcommand{\cftpartpagefont}{\sffamily\scshape\large} % part page number
+\setlength{\cftbeforepartskip}{1em}                   % part vspace before
+\renewcommand{\cftchapfont}{\sffamily\scshape\large}     % chapter title
+\renewcommand{\cftchappagefont}{\sffamily\scshape\large} % chapter page number
+\setlength{\cftbeforechapskip}{.05em}                    % chapter vspace before
+
+% set chapter numbers flushright
+\newcommand{\chapnumlen}{.5em}
+\renewcommand{\cftchappresnum}{\hfill}
+\renewcommand{\cftchapaftersnum}{\hspace*{\chapnumlen}}
+\addtolength{\cftchapnumwidth}{\chapnumlen}
+% \renewcommand{\cftchapnumwidth}{\chapnumlen}
+% \addtolength{\cftchapindent}{2em}
+
+% \setlength{\cftbeforechapskip}{.25em}
+% \setlength{\cftbeforepartskip}{1.5em}
+
+\newcommand{\partnumlen}{.75em}
+\renewcommand{\cftpartpresnum}{\hfill}
+\renewcommand{\cftpartaftersnum}{\hspace*{\partnumlen}}
+% \addtolength{\cftpartnumwidth}{\partnumlen}
+\setlength{\cftpartindent}{0em}
+% \renewcommand{\cftpartnumwidth}{\partnumlen}
+
+% \renewcommand{\cftpartnumwidth}{\cftpartpagewidth}
+% \renewcommand{\cftpartnumformat}[1]{\hfill{\bfseries #1}} % Adjust font weight/style if necessary
+% \renewcommand{\cftpartnumwidth}{\numlen}  % Adjust this width as needed
+% \renewcommand{\cftpartleader}{\hfill} % Use this to add the space before the number
+
+% lists
+\usepackage{enumitem}
+\setlist[itemize]{
+  label={--} % en-dash as bullet symbol
+}
+
+\usepackage{threeparttable} % for papaja apa tables
+\setlength{\tabcolsep}{4pt} % horizontal space between table columns
+
+% styling for captions
+\usepackage[format=plain]{caption}
+\usepackage{marginfix} % load before sidenotes to improve sidenote positioning
+\usepackage{sidenotes}
+\usepackage{marginnote}
+\DeclareCaptionFont{caps}{\footnotesize}
+\DeclareCaptionFont{labels}{\footnotesize\bfseries}
+
+\captionsetup{
+  labelfont=labels,
+  textfont=caps,
+  labelsep=newline,
+  skip=0pt
+}
+\DeclareCaptionStyle{marginfigure}{labelfont=labels,textfont=caps,labelsep=newline,skip=3pt}
+\DeclareCaptionStyle{sidecaption}{labelfont=labels,textfont=caps,labelsep=newline,aboveskip=-1em}
+
+\setlength{\intextsep}{9pt}
+\setlength{\textfloatsep}{6pt}
+
+% reset sidenote counter at start of each chapter
+\let\oldchapter\chapter
+\def\chapter{%
+  \setcounter{sidenote}{1}%
+  \oldchapter
+}
+
+
+% space above and below equations
+% \setlength{\abovedisplayskip}{0pt}
+% \setlength{\belowdisplayskip}{0pt}
+\usepackage[nodisplayskipstretch]{setspace}
+
+ % override quarto box settings
+\ifdefined\Shaded\renewenvironment{Shaded}
+  {\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, interior hidden, frame hidden, boxrule=0pt, top=0pt, bottom=0pt, sharp corners]}
+  {\end{tcolorbox}}
+\fi
+
+% index
+\usepackage{imakeidx}
+\makeindex[intoc=true] %, columns=3, columnseprule=true, options=-s latex/indexstyles.ist]
+
+% try to prevent within-word hyphenation across pages
+\brokenpenalty10000\relax
+
+% temporary settings for copyediting
+% \setstretch{2}
+% \usepackage{lineno}
+% \linenumbers
+
+%%%%%%%%%%%%%%%%%%
+% end preamble.tex
+%%%%%%%%%%%%%%%%%%
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{sidenotes}{}{\usepackage{sidenotes}}
+\@ifpackageloaded{marginnote}{}{\usepackage{marginnote}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% Make links footnotes instead of hotlinks:
+\DeclareRobustCommand{\href}[2]{#2\sidenote{\footnotesize \url{#1}}}
+\hypersetup{
+  pdftitle={Many Babies Manual},
+  pdfauthor={Heidi Baumgartner},
+  colorlinks=true,
+  linkcolor={DarkBlue},
+  filecolor={Maroon},
+  citecolor={DarkGreen},
+  urlcolor={DarkGreen},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Many Babies Manual}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Policies, guidelines, and resources for the ManyBabies
+Consortium}
+\author{Heidi Baumgartner}
+\date{2025-11-18}
+\begin{document}
+\newgeometry{}
+
+\begin{titlepage}
+\end{titlepage}
+
+\begin{titlepage}
+  \centering
+  {\usekomafont{title}\scshape\Huge Many Babies Manual\par}\clearpage
+\end{titlepage}
+
+\begin{titlepage}
+  \begin{center}
+    {\usekomafont{title}\scshape\Huge Many Babies Manual\par}
+    \vskip 1em
+    {\usekomafont{subtitle}\LARGE Policies, guidelines, and resources
+for the ManyBabies Consortium\par}
+    \vskip 1em
+    \setstretch{1.5}
+    {\usekomafont{author}  and~Heidi Baumgartner \par}
+    \vfill
+    {\rmfamily\large The MIT Press\\Cambridge, Massachusetts\\London, England}
+  \end{center}
+\end{titlepage}
+
+\begin{titlepage}
+  \vspace*{\fill}
+  {\rmfamily\scriptsize
+    © 2025 Massachusetts Institute of Technology\par
+    All rights reserved. No part of this book may be used to train artificial intelligence systems or reproduced in any form by any electronic or mechanical means (including photocopying, recording, or information storage and retrieval) without permission in writing from the publisher.\par
+    The MIT Press would like to thank the anonymous peer reviewers who provided comments on drafts of this book. The generous work of academic experts is essential for establishing the authority and quality of our publications. We acknowledge with gratitude the contributions of these otherwise uncredited readers.\par
+    This book was set in ETbb and Source Sans Pro by \_\_\_\_\_\_\_. Printed and bound in the United States of America.\par
+    Library of Congress Cataloging-in-Publication Data is available.\par
+    ISBN: 978-0-262-55256-1\par
+    10 9 8 7 6 5 4 3 2 1\par
+  }
+  \vspace*{\fill}
+\end{titlepage}
+
+\restoregeometry{}
+\renewcommand*\contentsname{Contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{0}
+\tableofcontents
+}
+
+\phantomsection\label{sec-preface}
+\bookmarksetup{startatroot}
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\markboth{Preface}{Preface}
+
+ManyBabies is a global consortium of developmental psychology
+labs\ldots{}
+
+\begin{tcolorbox}[colframe=.grey, title=\faPersonFallingBurst \enspace Accident report]
+
+\subsection*{UNDER DEVELOPMENT}\label{under-development}
+\addcontentsline{toc}{subsection}{UNDER DEVELOPMENT}
+
+THIS MANUAL IS STILL UNDER DEVELOPMENT! Please use the Google Doc
+version of the MB General Manual available from the Resources page of
+the MB website for now. Thanks!
+
+\end{tcolorbox}
+
+\section*{How to use this manual}\label{how-to-use-this-manual}
+\addcontentsline{toc}{section}{How to use this manual}
+
+\markright{How to use this manual}
+
+This manual is organized into
+
+\section*{Onward!}\label{onward}
+\addcontentsline{toc}{section}{Onward!}
+
+\markright{Onward!}
+
+Thanks for joining us at \emph{ManyBabies}! The full source code for the
+manual is available at \url{https://github.com/manybabies/mb-manual}. We
+encourage you to browse, comment, and log issues or
+suggestions.\sidenote{\footnotesize The best way to give us specific feedback is to
+  create an issue on our github page at
+  \url{https://github.com/manybabies/mb-manual/issues}.}
+
+\section*{Acknowledgments}\label{acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
+
+\markright{Acknowledgments}
+
+This manual was adapted from \emph{Experimentology}, a open textbook of
+experimental psychology methods {[}@experimentology2025{]}. We follow in
+the footsteps of the \emph{Experimentology} authors by offering this
+manual openly licensed via CC BY-NC 4.0.
+
+Thanks to the contributions of countless ManyBabies members for their
+efforts in developing the content of this manual.
+
+\section*{References}
+
+\begin{CSLReferences}{1}{0}
+
+
+
+\end{CSLReferences}
+
+\phantomsection\label{sec-codeofconduct}
+\bookmarksetup{startatroot}
+
+\chapter*{MB Code of Conduct}
+\addcontentsline{toc}{chapter}{MB Code of Conduct}
+
+\markboth{MB Code of Conduct}{MB Code of Conduct}
+
+\begin{quote}
+last updated: 07/07/2020
+\end{quote}
+
+\section*{Our Pledge}\label{our-pledge}
+\addcontentsline{toc}{section}{Our Pledge}
+
+\markright{Our Pledge}
+
+In the interest of fostering an open and welcoming environment, we as
+contributors and maintainers pledge to make participation in our project
+and our community a harassment-free experience for everyone, regardless
+of age, body size, disability, ethnicity, sex characteristics, gender
+identity and expression, level of experience, education, socio-economic
+status, nationality, political perspective, status within the community,
+personal appearance, race, religion, or sexual identity and orientation.
+
+\section*{Our Standards}\label{our-standards}
+\addcontentsline{toc}{section}{Our Standards}
+
+\markright{Our Standards}
+
+Examples of behavior that contribute to creating a positive environment
+include:
+
+\begin{itemize}
+\tightlist
+\item
+  Using welcoming and inclusive language
+\item
+  Being respectful of differing viewpoints and experiences
+\item
+  Gracefully accepting constructive criticism
+\item
+  Focusing on what is best for the community
+\item
+  Showing empathy towards other community members
+\end{itemize}
+
+Examples of unacceptable behavior by contributors include:
+
+\begin{itemize}
+\tightlist
+\item
+  The use of sexualized language or imagery and unwelcome sexual
+  attention or advances
+\item
+  Trolling, insulting/derogatory comments, and personal or political
+  attacks
+\item
+  Public or private harassment
+\item
+  Publishing others' private information, such as a physical or
+  electronic address, without explicit permission
+\item
+  Other conduct which could reasonably be considered inappropriate in a
+  professional setting
+\end{itemize}
+
+\section*{Our Responsibilities}\label{our-responsibilities}
+\addcontentsline{toc}{section}{Our Responsibilities}
+
+\markright{Our Responsibilities}
+
+The Governing Board, Executive Director, and project leads are
+responsible for clarifying the standards of acceptable behavior and are
+expected to take appropriate and fair corrective action in response to
+any instances of unacceptable behavior.
+
+The Governing Board, Executive Director, and project leads have the
+right and responsibility to remove, edit, or reject comments, commits,
+code, wiki edits, issues, emails, and other contributions that are not
+aligned to this Code of Conduct, or to ban temporarily or permanently
+any contributor for other behaviors that they deem inappropriate,
+threatening, offensive, or harmful.
+
+\section*{Scope}\label{scope}
+\addcontentsline{toc}{section}{Scope}
+
+\markright{Scope}
+
+This Code of Conduct applies both within project spaces (OSF, github,
+mailing lists) and in public spaces when an individual is representing
+the project or its community. Examples of representing a project or
+community include using an official project e-mail address, posting via
+an official social media account, or acting as an appointed
+representative at an online or offline event (e.g.~during a conference
+presentation or at a meetup). Representation of a project may be further
+defined and clarified by the Governing Board.
+
+\section*{Enforcement}\label{enforcement}
+\addcontentsline{toc}{section}{Enforcement}
+
+\markright{Enforcement}
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may
+be reported by contacting the
+\href{mailto:contact@manybabies.org}{ManyBabies Executive Director}, the
+\href{mailto:govboard@manybabies.org}{ManyBabies Governing Board}, or
+any of its \href{https://manybabies.org/people/}{members}. All
+complaints will be reviewed and investigated and will result in a
+response that is deemed necessary and appropriate to the circumstances,
+ranging from discussion of these policies to expulsion from the group,
+including all mailing lists (either temporarily or permanently). It is
+at the complainant's discretion to pursue additional action through
+other legal or institutional mechanisms. The Governing Board and
+Executive Director are obligated to maintain confidentiality with regard
+to the reporter of an incident. In cases of complaints directly to
+project leads, Governing Board members, or the Executive Director, the
+reporter's identity will be known only to those directly contacted by
+the complainant, unless the complainant's explicit permission is
+obtained.
+
+Governing Board members or project leads who do not follow or enforce
+the Code of Conduct in good faith may face temporary or permanent
+repercussions as determined by other members of the Governing Board or
+project's leadership.
+
+Further details of specific enforcement policies may be posted
+separately.
+
+\section*{Attribution}\label{attribution}
+\addcontentsline{toc}{section}{Attribution}
+
+\markright{Attribution}
+
+This Code of Conduct is adapted from the
+\href{https://www.contributor-covenant.org/version/1/4/code-of-conduct.html}{Contributor
+Covenant, version 1.4} and from the
+\href{https://github.com/psych-ds/psych-DS/blob/master/CODE_OF_CONDUCT.md}{Psych-DS
+Code of Conduct} (retrieved on 2018-11-23).
+
+\section*{Contribute}\label{contribute}
+\addcontentsline{toc}{section}{Contribute}
+
+\markright{Contribute}
+
+Note that this is a living document. Comments and questions are
+explicitly encouraged.
+\href{https://docs.google.com/document/d/1dZ3sF2UcxvpkfOfKSKFeObTMZRbpUYloMUiPYtZy0ng/edit?usp=sharing}{Here
+is a version of the Code that allows comments}. \emph{(To make anonymous
+comments, make sure you are not logged in to Google in your browser.)}
+
+\part{New Projects}
+
+\chapter{Proposing a project}\label{sec-proposal}
+
+\chapter{Project Onboarding}\label{sec-projectonboarding}
+
+\begin{quote}
+The MB Executive Director will help project leads set up the following
+resources before project launch:
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Name}: should be short and informative; use exisiting projects
+  as a guide
+\item
+  \textbf{Logo}: main projects only; spin-offs can use main project logo
+  or request a variant
+\item
+  \textbf{Directory on MB Google Drive}: project leads will be given
+  full access and power to manage access/sharing
+\item
+  \textbf{Listserv}: \texttt{mb{[}proj\#{]}-list@manybabies.org}
+\item
+  \textbf{Contact email}: \texttt{mb{[}proj\#{]}@manybabies.org} (note
+  that this address is set up as a Google Group with a
+  \href{https://support.google.com/a/users/answer/10375787?hl=en}{collaborative
+  inbox} for project leads to share)
+\item
+  \textbf{Page on MB website}: \texttt{manybabies.org/MB{[}proj\#{]}}
+\end{itemize}
+
+\chapter{Participation Call}\label{sec-participationcall}
+
+\section{Project launch}\label{project-launch}
+
+\begin{quote}
+Project Leads will plan/coordinate project launch details in
+consultation with the MB Exec. Dir. and Governing Board. These efforts
+can include:
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  Announcement to MB community with invite to participate
+\item
+  Announcement shared to developmental listservs (ICIS, CDS)
+\item
+  Kick-off event
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\chapter{Conclusion}\label{sec-conclusion}
+
+You've made it to the end of the ManyBabies Manual.
+
+\section{Project-specific resources}\label{project-specific-resources}
+
+\phantomsection\label{3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9}
+
+
+
+% \usepackage[left=1in,marginparwidth=2.0666666666667in,textwidth=4.1333333333333in,marginparsep=0.3in]{geometry}
+% \index{independent variable|seealso{manipulation, treatment}}
+% \index{manipulation|seealso{independent variable, treatment}}
+% \index{treatment|seealso{independent variable, manipulation}}
+
+% \index{dependent variable|seealso{measure, outcome}}
+% \index{measure|seealso{dependent variable, outcome}}
+% \index{outcome|seealso{dependent variable, measure}}
+
+\index{de-identification|seealso{anonymization}}
+\index{anonymization|seealso{de-identification}}
+
+\index{analytic flexibility|seealso{p-hacking}}
+\index{p-hacking|seealso{analytic flexibility}}
+
+\index{publication bias|seealso{selective reporting}}
+\index{selective reporting|seealso{publication bias}}
+
+\index{Cohen's $d$|seealso{standardized mean difference (SMD)}}
+\index{standardized mean difference (SMD)|seealso{Cohen's $d$}}
+
+\index{multiplicity|seealso{multiple comparisons}}
+\index{multiple comparisons|seealso{multiplicity}}
+
+\index{robustness analysis|seealso{multiverse analysis, sensitivity analysis}}
+\index{multiverse analysis|seealso{robustness analysis, sensitivity analysis}}
+\index{sensitivity analysis|seealso{multiverse analysis, robustness analysis}}
+
+% \index{APA|see{American Psychological Association (APA)}}
+\index{CDI|see{Communicative Development Inventory}}
+\index{DAG|see{directed acyclic graph (DAG)}}
+\index{blinding|see{masking}}
+
+\newgeometry{
+  centering,                             % split margins equally
+  margin=.6in,                           % margins (must all be at least .5in)
+  includemp, includehead,                % include sidenotes & header in body
+  % showframe                              % show page structure (for debugging)
+  % left=1in,
+  marginparwidth=0in,marginparsep=0.3in%,textwidth=4.1333333333333in
+}
+
+% \addtogeometry{}
+\printindex
+\restoregeometry{}
+
+
+\end{document}

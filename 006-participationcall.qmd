@@ -1,0 +1,11 @@
+{{< include _setup.qmd >}}
+
+# Participation Call {#sec-participationcall}
+
+## Project launch
+> Project Leads will plan/coordinate project launch details in consultation with the MB Exec. Dir. and Governing Board. These efforts can include:
+
+* Announcement to MB community with invite to participate
+* Announcement shared to developmental listservs (ICIS, CDS)
+* Kick-off event
+

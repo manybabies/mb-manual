@@ -1,0 +1,17 @@
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
+dplyr
+tidyr
+readr
+stringr
+forcats
+purrr
+ggplot2
+ggthemes
+glue
+knitr

@@ -1,0 +1,4 @@
+{{< include _setup.qmd >}}
+
+# Proposing a project {#sec-proposal}
+

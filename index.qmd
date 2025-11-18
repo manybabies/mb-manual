@@ -1,0 +1,63 @@
+::: {.content-visible when-format="html"}
+::: {.quarto-title-citeas .csl-entry}
+ManyBabies. 2025. _ManyBabies General Manual_. 
+:::
+:::
+
+
+
+# Preface {.unnumbered #sec-preface}
+
+ManyBabies is a global consortium of developmental psychology labs... 
+
+::: {.callout-note title="accident report" collapse="false"}
+### UNDER DEVELOPMENT {-}
+
+THIS MANUAL IS STILL UNDER DEVELOPMENT! Please use the Google Doc version of the MB General Manual available from the <a href="https://manybabies.org/resources/">Resources</a> page of the MB website for now. Thanks!   
+:::
+
+## How to use this manual {-}
+
+This manual is organized into 
+
+
+
+## Onward! {-}
+
+Thanks for joining us at *ManyBabies*! The full source code for the manual is available at <https://github.com/manybabies/mb-manual>. We encourage you to browse, comment, and log issues or suggestions.^[The best way to give us specific feedback is to create an issue on our github page at <https://github.com/manybabies/mb-manual/issues>.]
+
+
+
+::: {.content-visible when-format="html"}
+
+## Citing this manual
+
+::: {#quarto-appendix .default}
+BibTeX citation:
+<pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@book{manybabies2025,
+  author    = {ManyBabies},
+  title     = {{ManyBabies General Manual}},
+  year      = {2025}
+}</code></pre>
+
+For attribution, please cite this work as:
+<div id="ref-manybabies2025" class="csl-entry quarto-appendix-citeas">
+ManyBabies. 2025. _ManyBabies General Manual_. <a href="https://manybabies.org/mb-manual">https://manybabies.org/mb-manual</a>.
+</div>
+:::
+
+:::
+
+## Acknowledgments
+
+This manual was adapted from *Experimentology*, a open textbook of experimental psychology methods [@experimentology2025]. We follow in the footsteps of the *Experimentology* authors by offering this manual openly licensed via <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>.
+
+Thanks to the contributions of countless ManyBabies members for their efforts in developing the content of this manual.
+
+\section*{References}
+
+\begin{CSLReferences}{1}{0}
+
+
+
+\end{CSLReferences}

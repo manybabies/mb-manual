@@ -1,0 +1,132 @@
+project:
+  type: book
+  preview:
+    port: 4200
+
+resources:
+  - CNAME
+  
+reference-location: margin # footnotes in margin
+link-citations: true       # citations link to references
+
+bibliography: mb-manual.bib
+reference-section-title: References
+
+crossref:
+  fig-prefix: figure
+  tbl-prefix: table
+  sec-prefix: section
+
+language:
+  crossref-ch-prefix: chapter
+  crossref-apx-prefix: appendix
+
+df-print: kable
+filters:
+  - boxes
+
+format:
+  html:
+    theme:
+      light: [flatly, resources/scss/global.scss]
+      dark: [darkly, resources/scss/global.scss]
+    published-title: "Updated"
+
+  pdf:
+    documentclass: scrreprt
+    classoption: [numbers=noenddot,DIV=11]
+    keep-tex: true
+    include-in-header: resources/tex/preamble.tex
+    include-after-body: resources/tex/postamble.tex
+    template-partials:
+      - resources/tex/partials/before-body.tex
+    citeproc: false # don't run pandoc default citation handling
+    csl: chicago-author-date-custom.csl
+    filters:
+      - section-bibliographies
+    toc-depth: 1 # level 1 headings (i.e. parts and chapters)
+    toc-title: Contents # title of table of contents
+    links-as-notes: true # turn URLs into sidenotes
+    citecolor: DarkGreen # tufte color
+    linkcolor: DarkBlue # tufte color
+    urlcolor: DarkGreen # tufte color
+    # lot: true
+
+knitr:
+  opts_chunk:
+    comment: "#>"
+    collapse: TRUE
+    cache.lazy: FALSE
+    dev: "png"
+    dpi: 300
+
+execute: 
+  echo: false
+  message: false
+  warning: false
+  error: false
+  cache: true
+  code-overflow: wrap
+  tidy: true
+
+book:
+  title: "Many Babies Manual"
+  subtitle: "Policies, guidelines, and resources for the ManyBabies Consortium"
+  author:
+    - name: Heidi Baumgartner
+      orcid: 0000-0001-5032-5995
+  date: last-modified
+  # doi: 10.25936/3jp6-5m50
+  repo-url: https://github.com/manybabies/mb-manual
+  repo-actions: [source, issue]
+  downloads: [pdf]
+  sidebar:
+    style: "docked"
+    footer: license.qmd
+  # google-analytics: G-659MTW4XZ4
+  # cookie-consent: true
+  chapters:
+    - index.qmd
+    - 000-codeofconduct.qmd
+    # - part: "About"
+    #   chapters:
+    # - 001-mission.qmd
+    # - 001-principles.qmd
+    # - 001-governance.qmd
+    # - 001-projecttypes.qmd
+    # - part: "Roles and Responsibilities"
+    #   chapters:
+    #     - 002-board.qmd
+    #     - 002-projectleads.qmd
+    #     - 002-contributors.qmd
+    # - part: "Policies"
+    #   chapters:
+    #     - openscience.qmd
+    #     - datacollection.qmd
+    #     - publishing.qmd
+    #     - authorship.qmd
+    #     - communications.qmd
+    #     - styleguide.qmd
+    # - part: "Project Overview"
+    #   chapters:
+    #     - process.qmd
+    #     - workinggroups.qmd
+    # - part: "General Resources"
+    #   chapters:
+    #     - credit.qmd
+    #     - calendar.qmd
+    #     - labid.qmd
+    # - part: "Project Resources"
+    #   chapters:
+    #     - communicationresources.qmd
+    #     - datastorage.qmd
+    #     - github.qmd
+    #     - osf.qmd
+    #     - website
+    #     - projecttracker.qmd
+    - part: "New Projects"
+      chapters:
+        - 006-proposal.qmd
+        - 006-projectonboarding.qmd
+        - 006-participationcall.qmd
+    - 099-conclusion.qmd

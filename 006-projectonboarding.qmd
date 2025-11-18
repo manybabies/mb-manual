@@ -1,0 +1,12 @@
+{{< include _setup.qmd >}}
+
+# Project Onboarding {#sec-projectonboarding}
+
+> The MB Executive Director will help project leads set up the following resources before project launch:
+
+* **Name**: should be short and informative; use exisiting projects as a guide
+* **Logo**: main projects only; spin-offs can use main project logo or request a variant
+* **Directory on MB Google Drive**: project leads will be given full access and power to manage access/sharing
+* **Listserv**: `mb[proj#]-list@manybabies.org`
+* **Contact email**: `mb[proj#]@manybabies.org` (note that this address is set up as a Google Group with a [collaborative inbox](https://support.google.com/a/users/answer/10375787?hl=en) for project leads to share)
+* **Page on MB website**: `manybabies.org/MB[proj#]`
