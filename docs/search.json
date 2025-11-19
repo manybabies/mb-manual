@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Many Babies Manual",
+    "section": "",
+    "text": "Preface\nManyBabies is a global consortium of developmental psychology labs…",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use-this-manual",
+    "href": "index.html#how-to-use-this-manual",
+    "title": "Many Babies Manual",
+    "section": "How to use this manual",
+    "text": "How to use this manual\nThis manual is organized into",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#onward",
+    "href": "index.html#onward",
+    "title": "Many Babies Manual",
+    "section": "Onward!",
+    "text": "Onward!\nThanks for joining us at ManyBabies! The full source code for the manual is available at https://github.com/manybabies/mb-manual. We encourage you to browse, comment, and log issues or suggestions.1\n1 The best way to give us specific feedback is to create an issue on our github page at https://github.com/manybabies/mb-manual/issues.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#citing-this-manual",
+    "href": "index.html#citing-this-manual",
+    "title": "Many Babies Manual",
+    "section": "Citing this manual",
+    "text": "Citing this manual\n\nBibTeX citation:\n@book{manybabies2025,\n  author    = {ManyBabies},\n  title     = {{ManyBabies General Manual}},\n  year      = {2025}\n}\nFor attribution, please cite this work as:\n\nManyBabies. 2025. ManyBabies General Manual. https://manybabies.org/mb-manual.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "Many Babies Manual",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThis manual was adapted from Experimentology, a open textbook of experimental psychology methods (Frank et al. 2025). We follow in the footsteps of the Experimentology authors by offering this manual openly licensed via CC BY-NC 4.0.\nThanks to the contributions of countless ManyBabies members for their efforts in developing the content of this manual.",
+    "crumbs": [
+      "Preface"
+    ]
+  }
+]
