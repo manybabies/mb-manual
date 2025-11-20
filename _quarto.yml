@@ -89,12 +89,12 @@ book:
   chapters:
     - index.qmd
     - 000-codeofconduct.qmd
-    # - part: "About"
-    #   chapters:
-    # - 001-mission.qmd
-    # - 001-principles.qmd
-    # - 001-governance.qmd
-    # - 001-projecttypes.qmd
+    - part: "About"
+      chapters:
+        - 001-mission.qmd
+        - 001-principles.qmd
+        - 001-governance.qmd
+        - 001-projecttypes.qmd
     # - part: "Roles and Responsibilities"
     #   chapters:
     #     - 002-board.qmd
