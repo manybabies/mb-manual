@@ -114,8 +114,8 @@ book:
     #     - workinggroups.qmd
     - part: "General Resources"
       chapters:
-        - 005-credit.qmd
         - 005-calendar.qmd
+        - 005-credit.qmd
         - 005-labids.qmd
     # - part: "Project Resources"
     #   chapters:

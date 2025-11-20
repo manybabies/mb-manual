@@ -122,12 +122,12 @@
   {
     "objectID": "005-calendar.html",
     "href": "005-calendar.html",
-    "title": "2  Calendar and events",
+    "title": "1  Calendar and events",
     "section": "",
-    "text": "2.1 View the ManyBabies public calendar",
+    "text": "1.1 View the MB Calendar",
     "crumbs": [
       "General Resources",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Calendar and events</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Calendar and events</span>"
     ]
   },
   {
@@ -144,12 +144,12 @@
   {
     "objectID": "005-calendar.html#view-upcoming-mb-events",
     "href": "005-calendar.html#view-upcoming-mb-events",
-    "title": "2  Calendar and events",
-    "section": "2.2 View upcoming MB events",
-    "text": "2.2 View upcoming MB events\n\nRecordings of past events can be found on our MB YouTube channel",
+    "title": "1  Calendar and events",
+    "section": "1.2 View upcoming MB events",
+    "text": "1.2 View upcoming MB events\n\nRecordings of past events can be found on our MB YouTube channel",
     "crumbs": [
       "General Resources",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Calendar and events</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Calendar and events</span>"
     ]
   },
   {
@@ -203,6 +203,28 @@
     "text": "7.1 Project-specific resources",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "005-calendar.html#view-the",
+    "href": "005-calendar.html#view-the",
+    "title": "1  Calendar and events",
+    "section": "",
+    "text": "Email us with questions or to get your event added to the calendar\nSubscribe to the ManyBabies calendar using this link",
+    "crumbs": [
+      "General Resources",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Calendar and events</span>"
+    ]
+  },
+  {
+    "objectID": "005-calendar.html#view-upcoming",
+    "href": "005-calendar.html#view-upcoming",
+    "title": "1  Calendar and events",
+    "section": "1.2 View upcoming MB Events",
+    "text": "1.2 View upcoming MB Events\n\nRecordings of past events can be found on our MB YouTube channel",
+    "crumbs": [
+      "General Resources",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Calendar and events</span>"
     ]
   }
 ]
