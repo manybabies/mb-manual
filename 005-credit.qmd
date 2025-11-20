@@ -1,0 +1,4 @@
+{{< include _setup.qmd >}}
+
+# CRediT {#sec-credit}
+

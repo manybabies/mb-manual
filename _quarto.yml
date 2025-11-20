@@ -89,12 +89,12 @@ book:
   chapters:
     - index.qmd
     - 000-codeofconduct.qmd
-    - part: "About"
-      chapters:
-        - 001-mission.qmd
-        - 001-principles.qmd
-        - 001-governance.qmd
-        - 001-projecttypes.qmd
+    # - part: "About"
+    #   chapters:
+    #     - 001-mission.qmd
+    #     - 001-principles.qmd
+    #     - 001-governance.qmd
+    #     - 001-projecttypes.qmd
     # - part: "Roles and Responsibilities"
     #   chapters:
     #     - 002-board.qmd
@@ -112,11 +112,11 @@ book:
     #   chapters:
     #     - process.qmd
     #     - workinggroups.qmd
-    # - part: "General Resources"
-    #   chapters:
-    #     - credit.qmd
-    #     - calendar.qmd
-    #     - labid.qmd
+    - part: "General Resources"
+      chapters:
+        - 005-credit.qmd
+        - 005-calendar.qmd
+        - 005-labids.qmd
     # - part: "Project Resources"
     #   chapters:
     #     - communicationresources.qmd

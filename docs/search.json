@@ -120,56 +120,89 @@
     ]
   },
   {
+    "objectID": "005-calendar.html",
+    "href": "005-calendar.html",
+    "title": "2  Calendar and events",
+    "section": "",
+    "text": "2.1 View the ManyBabies public calendar",
+    "crumbs": [
+      "General Resources",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Calendar and events</span>"
+    ]
+  },
+  {
+    "objectID": "005-calendar.html#view-the-manybabies-public-calendar",
+    "href": "005-calendar.html#view-the-manybabies-public-calendar",
+    "title": "2  Calendar and events",
+    "section": "",
+    "text": "Email us with questions or to get your event added to the calendar\nSubscribe to the ManyBabies calendar using this link",
+    "crumbs": [
+      "General Resources",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Calendar and events</span>"
+    ]
+  },
+  {
+    "objectID": "005-calendar.html#view-upcoming-mb-events",
+    "href": "005-calendar.html#view-upcoming-mb-events",
+    "title": "2  Calendar and events",
+    "section": "2.2 View upcoming MB events",
+    "text": "2.2 View upcoming MB events\n\nRecordings of past events can be found on our MB YouTube channel",
+    "crumbs": [
+      "General Resources",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Calendar and events</span>"
+    ]
+  },
+  {
     "objectID": "006-projectonboarding.html",
     "href": "006-projectonboarding.html",
-    "title": "2  Project Onboarding",
+    "title": "5  Project Onboarding",
     "section": "",
     "text": "The MB Executive Director will help project leads set up the following resources before project launch:\n\n\nName: should be short and informative; use exisiting projects as a guide\nLogo: main projects only; spin-offs can use main project logo or request a variant\nDirectory on MB Google Drive: project leads will be given full access and power to manage access/sharing\nListserv: mb[proj#]-list@manybabies.org\nContact email: mb[proj#]@manybabies.org (note that this address is set up as a Google Group with a collaborative inbox for project leads to share)\nPage on MB website: manybabies.org/MB[proj#]",
     "crumbs": [
       "New Projects",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Onboarding</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Project Onboarding</span>"
     ]
   },
   {
     "objectID": "006-participationcall.html",
     "href": "006-participationcall.html",
-    "title": "3  Participation Call",
+    "title": "6  Participation Call",
     "section": "",
-    "text": "3.1 Project launch",
+    "text": "6.1 Project launch",
     "crumbs": [
       "New Projects",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Participation Call</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Participation Call</span>"
     ]
   },
   {
     "objectID": "006-participationcall.html#project-launch",
     "href": "006-participationcall.html#project-launch",
-    "title": "3  Participation Call",
+    "title": "6  Participation Call",
     "section": "",
     "text": "Project Leads will plan/coordinate project launch details in consultation with the MB Exec. Dir. and Governing Board. These efforts can include:\n\n\nAnnouncement to MB community with invite to participate\nAnnouncement shared to developmental listservs (ICIS, CDS)\nKick-off event",
     "crumbs": [
       "New Projects",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Participation Call</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Participation Call</span>"
     ]
   },
   {
     "objectID": "099-conclusion.html",
     "href": "099-conclusion.html",
-    "title": "4  Conclusion",
+    "title": "7  Conclusion",
     "section": "",
     "text": "Conclusion\nYou’ve made it to the end of the ManyBabies Manual.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Conclusion</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conclusion</span>"
     ]
   },
   {
     "objectID": "099-conclusion.html#project-specific-resources",
     "href": "099-conclusion.html#project-specific-resources",
-    "title": "4  Conclusion",
-    "section": "4.1 Project-specific resources",
-    "text": "4.1 Project-specific resources",
+    "title": "7  Conclusion",
+    "section": "7.1 Project-specific resources",
+    "text": "7.1 Project-specific resources",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Conclusion</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conclusion</span>"
     ]
   }
 ]
